@@ -10,8 +10,6 @@ import com.github.retrooper.packetevents.wrapper.play.server.WrapperPlayServerEn
 import com.github.retrooper.packetevents.wrapper.play.server.WrapperPlayServerRemoveEntityEffect;
 import dev.demon.ServerSidedActions;
 import dev.demon.api.user.PlayerData;
-import dev.demon.objects.PotionEffectInfo;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 public class PacketHook extends PacketListenerAbstract {
@@ -61,6 +59,9 @@ public class PacketHook extends PacketListenerAbstract {
                     }
                 }
 
+                /**
+                 * Experimental server sided potion stuff..
+                 */
 
                 if (event.getPacketType() == PacketType.Play.Server.ENTITY_EFFECT) {
                     WrapperPlayServerEntityEffect effect = new WrapperPlayServerEntityEffect(event);

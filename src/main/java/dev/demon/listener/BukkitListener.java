@@ -18,6 +18,12 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+/**
+ * The methods in here can be bypassed by themselves alone, theses are only meant to be used with an anticheat
+ * These methods can help some anticheats that have issues with getting these things patched.
+ * Still these probably will still get bypassed with an anticheat, make improvements how you want.
+ */
+
 public class BukkitListener implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST)
@@ -60,7 +66,7 @@ public class BukkitListener implements Listener {
                 // Update their fire ticks to match with the server, so they can't modify packets to bypass.
                 event.getPlayerData().getPlayer().setFireTicks(event.getPlayerData().getFireTick());
                 event.getPlayerData().setFireTick(event.getPlayerData().getFireTick() - 1);
-            } else {
+            } else if (event.getPlayerData().isFireReady()) {
                 // Reset from the beginning.
                 event.getPlayerData().setFireReady(false);
                 event.getPlayerData().setFireTickedTimes(0);
@@ -219,9 +225,8 @@ public class BukkitListener implements Listener {
 
                         data.setFireTickedTimes(data.getFireTickedTimes() + 1);
 
-                        // Basic fire control, basically, I check if they take at least 2 ticks of fire damage
-                        // Then we set their fire ticks based on the server side.
-                        if (data.getFireTickedTimes() > 1 && !data.isFireReady() && data.isOnFire()) {
+                        // Basic fire control
+                        if (!data.isFireReady() && data.isOnFire()) {
                             data.setFireTick(170);
                             data.setFireReady(true);
                         }

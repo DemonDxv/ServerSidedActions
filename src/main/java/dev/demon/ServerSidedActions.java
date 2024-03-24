@@ -52,7 +52,9 @@ public class ServerSidedActions extends JavaPlugin {
                 this.serverTick = 0;
             }
 
-            // Execute the server tick for each player, and call the event, so we can use it to track the timing
+            // Execute the server tick for each player, and call the event
+            // So we can use it to track the timing for fire
+            // Probably not best to use bukkit events call event and to use my own system but whatever.
             this.userManager.getUserMap().values().forEach(playerData ->
                     Bukkit.getServer().getPluginManager()
                             .callEvent(new ServerTickEvent(this.serverTick, playerData)));
