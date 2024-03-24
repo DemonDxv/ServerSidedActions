@@ -13,7 +13,7 @@ Actions:
 Required Dependency:
 - PacketEvents 2.0 (https://www.spigotmc.org/resources/packetevents-api.80279/download?version=530100)
 
-Tested Version(s): (The quick regeneration of hearts on 1.9+ servers will have issues)
+Tested Version(s): (The quick regeneration of hearts on 1.9+ servers will have issues, and maybe crossbows?)
 - Spigot 1.8.8
 
 Todo:
