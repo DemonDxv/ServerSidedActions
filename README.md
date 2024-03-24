@@ -1,7 +1,8 @@
 **A plugin aimed at making specific client actions "server side".**
 
 What it does?:
-It makes certain player actions "server side" so that the client cannot manipulate them as easily, certain actions some anticheats don't pick up on (for some reason)
+It makes certain player actions "server side" so that the client "cannot" manipulate them as easily, certain actions some anticheats don't pick up on (for some reason)
+
 It basically cancels and blocks quick actions in-game. The plugin is very basic at the moment.
 
 Actions:
