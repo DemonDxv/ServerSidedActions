@@ -1,0 +1,7 @@
+name: ServerSidedActions
+description: A plugin aimed at making specific client actions "server side"
+author: demonpvp
+version: 1.0
+main: dev.demon.ServerSidedActions
+depend:
+  - packetevents
