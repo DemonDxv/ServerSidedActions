@@ -15,3 +15,6 @@ Required Dependency:
 
 Tested Version(s): (The quick regeneration of hearts on 1.9+ servers will have issues)
 - Spigot 1.8.8
+
+
+(i made this out of boredem)
