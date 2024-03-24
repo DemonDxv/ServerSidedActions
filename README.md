@@ -16,5 +16,10 @@ Required Dependency:
 Tested Version(s): (The quick regeneration of hearts on 1.9+ servers will have issues)
 - Spigot 1.8.8
 
+Todo:
+- Server side potion effects (Zoot/AntiPotion)
+- Fix small fast eat & fast bow bypass when first using the item
+- Fix AntiFire working when sending packets a high volumes
+
 
 (i made this out of boredem)
