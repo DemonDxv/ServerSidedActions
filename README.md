@@ -10,7 +10,7 @@ Actions:
 - Shooting arrows too quickly (fastbow/timer)
 - Removing fire from the player too quickly (antifire/timer)
 
-Required:
+Required Dependency:
 - PacketEvents 2.0
 
 Tested Version(s): (The quick regeneration of hearts on 1.9+ servers will have issues)
